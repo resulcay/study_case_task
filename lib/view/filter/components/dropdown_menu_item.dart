@@ -1,0 +1,30 @@
+List<String> muscles = const [
+  "",
+  "abdominals",
+  "abductors",
+  "adductors",
+  "biceps",
+  "calves",
+  "chest",
+  "forearms",
+  "glutes",
+  "hamstrings",
+  "lats",
+  "lowerback",
+  "middleback",
+  "neck",
+  "quadriceps",
+  "traps",
+  "triceps",
+];
+
+List<String> types = const [
+  "",
+  "cardio",
+  "olympic_weightlifting",
+  "plyometrics",
+  "powerlifting",
+  "strength",
+  "stretching",
+  "strongman",
+];

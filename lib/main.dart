@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
+import 'package:study_case_task/utilities/provider/dropdown_menu_item_provider.dart';
 import 'package:study_case_task/utilities/provider/exercise_provider.dart';
 
 import 'utilities/provider/is_loading_provider.dart';
@@ -9,6 +10,7 @@ import 'view/home/home_view.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
+  // Lock to vertical orientation.
   SystemChrome.setPreferredOrientations(
       [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]).then(
     (_) {
@@ -26,6 +28,7 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => IsLoadingProvider()),
         ChangeNotifierProvider(create: (_) => ExerciseProvider()),
+        ChangeNotifierProvider(create: (_) => DropDownMenuItemProvider()),
       ],
       child: MaterialApp(
         title: 'Study Case Task',
@@ -37,7 +40,6 @@ class MyApp extends StatelessWidget {
         routes: {
           '/': (context) => const HomeView(),
         },
-        //  home: const HomeView(),
       ),
     );
   }

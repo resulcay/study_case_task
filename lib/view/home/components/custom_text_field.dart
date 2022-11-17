@@ -20,7 +20,7 @@ class CustomTextField extends StatelessWidget {
       keyboardType: TextInputType.text,
       decoration: InputDecoration(
         hintText: ConstantAppText.textFieldHintText,
-        hintStyle: const TextStyle(fontSize: 16),
+        hintStyle: const TextStyle(fontSize: 14),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(8),
           borderSide: const BorderSide(
@@ -29,7 +29,7 @@ class CustomTextField extends StatelessWidget {
           ),
         ),
         filled: true,
-        contentPadding: context.paddingNormal,
+        contentPadding: context.paddingLow,
         fillColor: ConstantAppColor.pureWhite,
       ),
     );

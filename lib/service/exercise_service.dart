@@ -1,5 +1,4 @@
 // ignore_for_file: use_build_context_synchronously
-
 import 'dart:io';
 
 import 'package:dio/dio.dart';
@@ -32,6 +31,7 @@ class ExerciseService extends IExerciseService with ChangeNotifier {
     String? typeFilter,
   }) async {
     Provider.of<IsLoadingProvider>(context, listen: false).isLoading = true;
+
     String baseUrlCompleter =
         '?type=${typeFilter ?? ''}&muscle=${muscleFilter ?? ''}&name=${nameFilter ?? ''}';
     final response = await dio.get(

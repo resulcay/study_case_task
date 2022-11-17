@@ -1,5 +1,4 @@
 import 'package:dio/dio.dart';
-
 import '../constant/text.dart';
 
 class CustomDioMixin {

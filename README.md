@@ -1,6 +1,19 @@
 # study_case_task
 
-A new Flutter project.
+This is an mobile app which search exercises by filter feature. Also built via Flutter.
+
+Architecture : MVVM.
+
+Packages :   
+dio: ^4.0.6
+provider: ^6.0.4
+
+---ScreenShots and other Media---
+
+<img src="assets/images/1.png" width="500">  |  <img src="assets/images/2.png" width="500">  |
+<img src="assets/images/3.png" width="500">  |  <img src="assets/images/4.png" width="500">  |
+
+
 
 ## Getting Started
 

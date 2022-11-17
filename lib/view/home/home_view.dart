@@ -1,13 +1,9 @@
-import 'dart:math';
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:study_case_task/constant/color.dart';
-import 'package:study_case_task/constant/text.dart';
 import 'package:study_case_task/utilities/extension/padding_extension.dart';
 
 import '../../view_model/home_view_model.dart';
-import '../alert/alert_view.dart';
+import '../filter/filter_view.dart';
 import 'components/custom_icon_button.dart';
 import 'components/custom_progress_indicator.dart';
 import 'components/custom_text_field.dart';
@@ -27,10 +23,7 @@ class _HomeViewState extends HomeViewModel {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: ConstantAppColor.indigoAccent,
-      appBar: AppBar(
-        title: const Text(ConstantAppText.appBarSearchText),
-        centerTitle: true,
-      ),
+      appBar: appBar(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -50,7 +43,12 @@ class _HomeViewState extends HomeViewModel {
                   color: ConstantAppColor.darkerWhite,
                   function: () {
                     String nameFilter = searchTextController.text.trim();
-                    fetch(nameFilter: nameFilter);
+                    fetch(
+                        nameFilter: nameFilter,
+                        muscleFilter: dropDownMenuItemMuscle,
+                        typeFilter: dropDownMenuItemType);
+                    // dismiss keyboard after search in case of active.
+                    FocusManager.instance.primaryFocus?.unfocus();
                   },
                 ),
                 CustomIconButton(
@@ -61,7 +59,7 @@ class _HomeViewState extends HomeViewModel {
                     showDialog(
                       context: context,
                       useSafeArea: true,
-                      builder: (BuildContext context) => AlertView(
+                      builder: (BuildContext context) => FilterView(
                         searchText: searchTextController.text,
                       ),
                     );
