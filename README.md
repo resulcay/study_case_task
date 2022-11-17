@@ -10,8 +10,8 @@ provider: ^6.0.4
 
 ---ScreenShots and other Media---
 
-<img src="assets/images/1.png" width="500">  |  <img src="assets/images/2.png" width="500">  |
-<img src="assets/images/3.png" width="500">  |  <img src="assets/images/4.png" width="500">  |
+<img src="assets/images/1.png" width="300">  |  <img src="assets/images/2.png" width="300">  |
+<img src="assets/images/3.png" width="300">  |  <img src="assets/images/4.png" width="300">  |
 
 
 
